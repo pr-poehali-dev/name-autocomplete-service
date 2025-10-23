@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "name": "Autocomplete returns results",
+      "method": "GET",
+      "path": "/?query=Ал",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Missing query parameter",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 400
+    }
+  ]
+}
