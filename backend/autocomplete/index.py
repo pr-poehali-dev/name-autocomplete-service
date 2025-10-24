@@ -48,7 +48,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         }
     
     if method == 'GET':
-        params = event.get('queryStringParameters', {})
+        params = event.get('queryStringParameters') or {}
         query: str = params.get('query', '').strip()
         
         if not query:
